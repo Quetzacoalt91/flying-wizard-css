@@ -1,0 +1,10 @@
+app:
+  image: nginx
+  volumes:
+    - ./:/usr/share/nginx/html:ro
+  ports:
+    - 80:80
+sass:
+  image: larryprice/sass
+  volumes:
+    - ./css:/src

@@ -1,0 +1,77 @@
+/**
+* Cloud animation coming from Peter Klein: https://codepen.io/pmk/pen/ByXOOq
+*/
+@keyframes cloud {
+  0% {
+    left: 100%; }
+  100% {
+    left: -20%; } }
+@keyframes cloud-close {
+  0% {
+    left: 200%; }
+  100% {
+    left: -200%; } }
+@keyframes flying {
+  0% {
+    top: 50%;
+    left: 50%; }
+  25% {
+    top: 45%;
+    left: 52%; }
+  35% {
+    top: 50%;
+    left: 56%; }
+  50% {
+    top: 47%;
+    left: 58%; }
+  75% {
+    top: 55%;
+    left: 50%; }
+  85% {
+    top: 42%;
+    left: 53%; }
+  100% {
+    top: 50%;
+    left: 50%; } }
+body {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  background-color: darkgray; }
+
+.cloud {
+  position: absolute;
+  width: 400px;
+  height: 204px;
+  background: url("../img/cloud-1.png");
+  background-size: cover;
+  top: 25%;
+  z-index: -1;
+  animation: cloud 9s linear infinite; }
+  .cloud.small {
+    top: 6%;
+    transform: scale(0.6);
+    animation-delay: -1.5s;
+    animation-duration: 13.5s; }
+  .cloud.close {
+    top: -40%;
+    height: 210px;
+    transform: scale(8);
+    background: url("../img/cloud-2.png");
+    animation-name: cloud-close;
+    animation-delay: -45s;
+    animation-duration: 2.25s; }
+
+.wizard {
+  background: url("http://weclipart.com/gimg/B582A5549E8E3D8B/wizard-witch-on-broom.png");
+  background-size: cover;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: flying 4.5s ease-in-out infinite;
+  width: 639px;
+  height: 440px;
+  z-index: -1; }
+
+/*# sourceMappingURL=app.css.map */
